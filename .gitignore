@@ -1,0 +1,8 @@
+/node_modules
+/messageflow-app.iml
+# macOS system files
+.DS_Store
+
+# JetBrains IDE files
+# JetBrains IDE files
+.idea/
