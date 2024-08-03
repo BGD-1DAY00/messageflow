@@ -6,11 +6,12 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "../messageflow copy/node_modules/.bin/concurrently \\\"yarn workspace app dev\\\" \\\"yarn workspace docs dev\\\"",
+    "dev": "concurrently \"yarn workspace messageflow-web dev\" \"yarn workspace messageflow-docs dev\"",
     "start": "yarn workspaces run start",
     "build": "yarn workspaces run build",
     "test": "yarn workspaces run test",
-    "lint": "yarn workspaces run lint"
+    "lint": "yarn workspaces run lint",
+    "clean": "yarn workspaces run clean"
   },
   "keywords": [],
   "author": "",
