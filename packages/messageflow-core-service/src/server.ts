@@ -1,22 +1,27 @@
 import Koa from 'koa';
 import Router from '@koa/router';
 import bodyParser from 'koa-bodyparser';
-import userRoutes from './routes/userRoutes';
+import keysRoutes from './routes/keysRoutes';
 import { errorHandler } from './middleware/errorHandler';
 
 const app = new Koa();
-const router = new Router();
+const main_router = new Router();
 
 app.use(bodyParser());
 app.use(errorHandler);
 
-router.get('/', (ctx) => {
+main_router.get('/', (ctx) => {
     ctx.body = 'Hello, Koa!';
 });
+main_router.get('/heartbeat', (ctx) => {
+    ctx.body = {
 
-app.use(userRoutes.routes()).use(userRoutes.allowedMethods());
+    };
+});
 
-app.use(router.routes()).use(router.allowedMethods());
+app.use(keysRoutes.routes()).use(keysRoutes.allowedMethods());
+
+app.use(main_router.routes()).use(main_router.allowedMethods());
 
 app.on('error', (err, ctx) => {
     console.error('server error', err, ctx);

@@ -6,9 +6,17 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "concurrently \"yarn workspace messageflow-web dev\" \"yarn workspace messageflow-docs dev\"",
+    "dev": "concurrently \"yarn workspace messageflow-web-app dev\" \"yarn workspace messageflow-docs-app dev\" \"yarn workspace messageflow-core-service dev\" \"yarn workspace messageflow-gateway-service dev\"",
     "start": "yarn workspaces run start",
     "build": "yarn workspaces run build",
+    "build:web": "yarn workspace messageflow-web-app build",
+    "build:docs": "yarn workspace messageflow-docs-app build",
+    "build:core": "yarn workspace messageflow-core-service build",
+    "build:gateway": "yarn workspace messageflow-gateway-service build",
+    "dev:web": "yarn workspace messageflow-web-app dev",
+    "dev:docs": "yarn workspace messageflow-docs-app dev",
+    "dev:core": "yarn workspace messageflow-core-service dev",
+    "dev:gateway": "yarn workspace messageflow-gateway-service dev",
     "test": "yarn workspaces run test",
     "lint": "yarn workspaces run lint",
     "clean": "yarn workspaces run clean"

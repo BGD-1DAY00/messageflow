@@ -5,44 +5,44 @@ slug: /
 
 # Welcome to Message Flow
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Discover how to efficiently manage and distribute your messages with **Message Flow in just a few minutes**.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Get started by **creating a new topic** for your message flow.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Or **try Message Flow immediately** with our **quick start guide**.
 
 ### What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- An account on Message Flow
+- Your preferred HTTP/2 client
+- (Optional) A tool to generate and manage JWT tokens
 
-## Generate a new site
+## Create a new topic
 
-Generate a new Docusaurus site using the **classic template**.
+To begin using Message Flow:
 
-The classic template will automatically be added to your project after you run the command:
+1. Log into your Message Flow account
+2. Navigate to the "Create Topic" section
+3. Define your topic name and configuration
+4. Receive your private key for JWT token generation
+
+## Configure your message distribution
+
+In the topic configuration, you can:
+
+- Specify target APIs for message distribution
+- Set polling frequency and message batch sizes
+- Define message payload structure (currently supporting JSON)
+
+## Send your first message
+
+Use your HTTP/2 client to send a request to our API:
 
 ```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+# Example using curl (replace with actual values)
+curl --http2 https://api.messageflow.com/publish \
+  -H "Authorization: Bearer YOUR_JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"topic": "your_topic_name", "payload": {"key": "value"}}'
