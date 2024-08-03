@@ -152,7 +152,7 @@ export default function HomePage() {
                                 <img
                                     alt="Logo"
                                     src="/logo.jpg"
-                                    className="h-10 w-10 mr-3"
+                                    className="h-10 w-10 mr-3 rounded-md"
                                 />
                                 <span className="text-lg font-semibold">Message Flow</span>
                             </a>
@@ -663,7 +663,7 @@ export default function HomePage() {
                                 <img
                                     alt="Company logo"
                                     src="/logo.jpg"
-                                    className="h-8 w-8 mr-3"
+                                    className="h-8 w-8 mr-3 rounded-md"
                                 />
                                 <span className="text-lg font-semibold">Message Flow</span>
                             </div>

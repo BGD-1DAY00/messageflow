@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
-# Tutorial Intro
+# Welcome to Message Flow
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

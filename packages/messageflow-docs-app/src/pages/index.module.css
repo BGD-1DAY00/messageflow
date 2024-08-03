@@ -2,7 +2,11 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
-
+.custom-box {
+  height: 100px;
+  width: 100px;
+  border-radius: 8px; /* Medium rounded corners */
+}
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
