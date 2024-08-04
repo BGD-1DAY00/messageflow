@@ -1,23 +1,24 @@
-# Use an official Node runtime as the parent image
-FROM node:lts
+# Use an official Node runtime as the base image
+FROM node:22
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /usr/src/app
 
-# Copy package.json and yarn.lock files
+# Copy package.json
 COPY package.json ./
 
-# Install project dependencies
-RUN yarn install --frozen-lockfile
+# Install project dependencies and TypeScript
+RUN yarn install --frozen-lockfile && \
+    yarn global add typescript
 
-# Copy project files and folders to the current working directory (i.e. 'app' folder)
+# Copy the rest of your application's code
 COPY . .
 
-# Build the app
+# Build your app
 RUN yarn build
 
-# Expose port 3000
+# Expose the port your app runs on
 EXPOSE 3000
 
-# Serve the app
-CMD ["yarn", "serve", "--host", "0.0.0.0", "--no-open"]
+# Define the command to run your app
+CMD ["yarn", "start"]
