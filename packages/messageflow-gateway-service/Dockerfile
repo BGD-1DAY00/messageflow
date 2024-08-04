@@ -1,0 +1,23 @@
+# Use an official Node runtime as the base image
+FROM node:22
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy package.json and yarn.lock
+COPY package.json yarn.lock ./
+
+# Install project dependencies
+RUN yarn install --frozen-lockfile
+
+# Copy the rest of your application's code
+COPY . .
+
+# Build your app (if you have a build step)
+RUN yarn build
+
+# Expose the port your app runs on
+EXPOSE 3000
+
+# Define the command to run your app
+CMD ["yarn", "start"]
