@@ -13,7 +13,7 @@ Message Flow provides a simple yet powerful way to load test your system. Here's
 
     - **Test Payload**: Enter the JSON payload you want to use for testing.
     - **Number of Messages**: Specify how many messages you want to send.
-    - **Throughput**: Define how quickly you want these messages sent (messages per second) to the outbound API(s) you've defined. This can be accomplished by configuring the poll interval value, message velocity, etc. 
+    - **Throughput**: Define how quickly you want these messages sent (messages per second) to the outbound API(s) you've defined. This can be accomplished by configuring the poll interval value, message velocity, etc.
 
 [//]: # (![Test Setup]&#40;../static/img/test-setup.png&#41;)
 
