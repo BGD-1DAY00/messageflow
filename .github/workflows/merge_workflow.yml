@@ -53,11 +53,23 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.TOKEN }}
 
+      - name: Set lowercase repository name
+        run: |
+          REPO_LOWER=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
+          echo "REPO_LOWER=${REPO_LOWER}" >> $GITHUB_OUTPUT
+        id: repo_name
+
+      - name: Set lowercase package name
+        run: |
+          PACKAGE_LOWER=$(echo "${{ matrix.package }}" | tr '[:upper:]' '[:lower:]')
+          echo "PACKAGE_LOWER=${PACKAGE_LOWER}" >> $GITHUB_OUTPUT
+        id: package_name
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: ./packages/${{ matrix.package }}
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}/${{ matrix.package }}:${{ steps.package-version.outputs.VERSION }}
-            ghcr.io/${{ github.repository }}/${{ matrix.package }}:latest
+            ghcr.io/${{ steps.repo_name.outputs.REPO_LOWER }}/${{ steps.package_name.outputs.PACKAGE_LOWER }}:${{ steps.package-version.outputs.VERSION }}
+            ghcr.io/${{ steps.repo_name.outputs.REPO_LOWER }}/${{ steps.package_name.outputs.PACKAGE_LOWER }}:latest
