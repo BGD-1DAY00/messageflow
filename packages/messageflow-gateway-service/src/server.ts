@@ -1,7 +1,6 @@
 import Koa from 'koa';
 import Router from '@koa/router';
 import bodyParser from 'koa-bodyparser';
-import userRoutes from './routes/userRoutes';
 import { errorHandler } from './middleware/errorHandler';
 
 const app = new Koa();
@@ -14,7 +13,6 @@ router.get('/', (ctx) => {
     ctx.body = 'Hello, Koa!';
 });
 
-app.use(userRoutes.routes()).use(userRoutes.allowedMethods());
 
 app.use(router.routes()).use(router.allowedMethods());
 

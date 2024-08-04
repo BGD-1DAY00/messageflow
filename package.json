@@ -19,13 +19,16 @@
     "dev:gateway": "yarn workspace messageflow-gateway-service dev",
     "test": "yarn workspaces run test",
     "lint": "yarn workspaces run lint",
-    "clean": "yarn workspaces run clean"
+    "clean": "yarn workspaces run clean",
+    "update-versions": "node update-versions.js"
+
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "description": "A monorepo for multiple React applications",
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "semver": "^7.6.3"
   }
 }
