@@ -5,7 +5,7 @@ FROM node:22
 WORKDIR /usr/src/app
 
 # Copy package.json and yarn.lock
-COPY package.json yarn.lock ./
+COPY package.json ./
 
 # Install project dependencies
 RUN yarn install --frozen-lockfile
