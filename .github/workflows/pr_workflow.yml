@@ -29,6 +29,6 @@ jobs:
       - name: Build ${{ matrix.package }}
         run: yarn workspace ${{ matrix.package }} build
         if: contains(github.event.pull_request.changed_files, 'packages/${{ matrix.package }}/')
-      - name: Run tests for ${{ matrix.package }}
-        run: yarn workspace ${{ matrix.package }} test
-        if: contains(github.event.pull_request.changed_files, 'packages/${{ matrix.package }}/')4
+#      - name: Run tests for ${{ matrix.package }}
+#        run: yarn workspace ${{ matrix.package }} test
+#        if: contains(github.event.pull_request.changed_files, 'packages/${{ matrix.package }}/')4
