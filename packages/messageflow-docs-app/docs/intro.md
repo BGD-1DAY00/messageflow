@@ -36,7 +36,7 @@ In the topic configuration, you can:
 - Set polling frequency and message batch sizes
 - Define message payload structure (currently supporting JSON)
 
-## Send your first message :)
+## Send your first message :)!
 
 Use your HTTP/2 client to send a request to our API:
 
