@@ -6,17 +6,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const koa_1 = __importDefault(require("koa"));
 const router_1 = __importDefault(require("@koa/router"));
 const koa_bodyparser_1 = __importDefault(require("koa-bodyparser"));
-const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
+const keysRoutes_1 = __importDefault(require("./routes/keysRoutes"));
 const errorHandler_1 = require("./middleware/errorHandler");
 const app = new koa_1.default();
-const router = new router_1.default();
+const main_router = new router_1.default();
 app.use((0, koa_bodyparser_1.default)());
 app.use(errorHandler_1.errorHandler);
-router.get('/', (ctx) => {
+main_router.get('/', (ctx) => {
     ctx.body = 'Hello, Koa!';
 });
-app.use(userRoutes_1.default.routes()).use(userRoutes_1.default.allowedMethods());
-app.use(router.routes()).use(router.allowedMethods());
+main_router.get('/heartbeat', (ctx) => {
+    ctx.body = {};
+});
+app.use(keysRoutes_1.default.routes()).use(keysRoutes_1.default.allowedMethods());
+app.use(main_router.routes()).use(main_router.allowedMethods());
 app.on('error', (err, ctx) => {
     console.error('server error', err, ctx);
 });

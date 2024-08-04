@@ -4,10 +4,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'packages/messageflow-core-service/**'
-      - 'packages/messageflow-docs-app/**'
-      - 'packages/messageflow-gateway-service/**'
-      - 'packages/messageflow-web-app/**'
+      - 'packages/**'
 
 jobs:
   build:
@@ -28,7 +25,6 @@ jobs:
         run: yarn install
       - name: Build ${{ matrix.package }}
         run: yarn workspace ${{ matrix.package }} build
-        if: contains(github.event.pull_request.changed_files, 'packages/${{ matrix.package }}/')
 #      - name: Run tests for ${{ matrix.package }}
 #        run: yarn workspace ${{ matrix.package }} test
 #        if: contains(github.event.pull_request.changed_files, 'packages/${{ matrix.package }}/')4
