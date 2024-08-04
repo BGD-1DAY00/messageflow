@@ -30,5 +30,5 @@ Here's an example of how you might set up a test:
     "quantity": 5
   },
   "numberOfMessages": 10000,
-  "throughput": 100
+  "throughput": 1000
 }
