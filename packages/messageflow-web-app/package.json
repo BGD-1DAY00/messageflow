@@ -2,6 +2,7 @@
   "name": "messageflow-web-app",
   "version": "0.0.1",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "../../node_modules/.bin/next dev -p 3002",
     "build": "../../node_modules/.bin/next build",
