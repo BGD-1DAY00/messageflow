@@ -4,16 +4,17 @@ FROM node:22
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Copy package.json and yarn.lock
+# Copy package.json
 COPY package.json ./
 
-# Install project dependencies
-RUN yarn install --frozen-lockfile
+# Install project dependencies and TypeScript
+RUN yarn install --frozen-lockfile && \
+    yarn global add typescript
 
 # Copy the rest of your application's code
 COPY . .
 
-# Build your app (if necessary)
+# Build your app
 RUN yarn build
 
 # Expose the port your app runs on
