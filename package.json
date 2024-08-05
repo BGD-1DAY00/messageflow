@@ -20,7 +20,8 @@
     "test": "yarn workspaces run test",
     "lint": "yarn workspaces run lint",
     "clean": "yarn workspaces run clean",
-    "update-versions": "node update-versions.js"
+    "update-versions": "node update-versions.js",
+    "lock": "yarn workspaces run lock"
 
   },
   "keywords": [],

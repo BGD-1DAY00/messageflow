@@ -9,7 +9,7 @@ COPY package.json ./
 
 # Install project dependencies and TypeScript
 RUN yarn install && \
-    yarn global add typescript && yarn global add next
+    yarn global add typescript
 
 # Copy the rest of your application's code
 COPY . .
