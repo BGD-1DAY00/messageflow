@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package.json ./
 
 # Install project dependencies and TypeScript
-RUN yarn install --frozen-lockfile && \
+RUN yarn install  && \
     yarn global add typescript
 
 # Copy the rest of your application's code

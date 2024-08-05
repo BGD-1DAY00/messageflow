@@ -8,8 +8,8 @@ WORKDIR /usr/src/app
 COPY package.json ./
 
 # Install project dependencies and TypeScript
-RUN yarn install --frozen-lockfile && \
-    yarn global add typescript
+RUN yarn install && \
+    yarn global add typescript && yarn global add docusaurus
 
 # Copy the rest of your application's code
 COPY . .
