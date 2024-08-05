@@ -285,7 +285,7 @@ export default function HomePage() {
                                     Securely Distribute Messages with Ease
                                 </h1>
                                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                                    Deploy and integrate messaging systems in minutes, not days. Easily decouple your apps and build distributed systems without the headache.
+                                    Deploy and integrate messaging systems in minutes. Easily decouple your apps and build distributed systems with ease.
                                 </p>
                                 <div className="mt-10 flex items-center justify-center gap-x-6">
                                     <Link
