@@ -7,13 +7,13 @@ slug: /
 
 Discover how to efficiently manage and distribute your messages with **Message Flow in just a few minutes**.
 
-## Getting Started
+## Getting Started 🏃🏽
 
 Get started by **creating a new topic** for your message flow.
 
 Or **try Message Flow immediately** with our **quick start guide**.
 
-### What you'll need
+### What you'll need 📝
 
 - An account on Message Flow
 - Your preferred HTTP/2 client
