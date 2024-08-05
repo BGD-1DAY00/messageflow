@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rm -rf node_modules"
+    "clean": "rm -rf node_modules",
+    "lock": "yarn"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",

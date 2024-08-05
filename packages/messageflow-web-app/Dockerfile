@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package.json ./
 
 # Install project dependencies and TypeScript
-RUN yarn install
+RUN yarn install && yarn global add next
 
 # Copy the rest of your application's code
 COPY . .
