@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Message Flow Docs',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/logo.jpg',
+  favicon: 'img/logo.png',
 
 
   // Set the production url of your site here
@@ -57,7 +57,7 @@ const config: Config = {
       title: 'Message Flow',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.jpg',
+        src: 'img/logo.png',
         height: 200,
         width: 30
       },
