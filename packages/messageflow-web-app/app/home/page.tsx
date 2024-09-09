@@ -139,7 +139,7 @@ function classNames(...classes: (string | undefined | null | false)[]): string {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function HomePage() {
+export default function Home() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
@@ -148,21 +148,21 @@ export default function HomePage() {
             <header className="absolute inset-x-0 top-0 z-50 pl-9">
                 <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
                     <div className="flex flex-col items-start mb-8 md:mb-0">
-                            <a href="#" className="flex items-center">
-                                <img
-                                    alt="Logo"
-                                    src="/logo.jpg"
-                                    className="h-10 w-10 mr-3 rounded-md"
-                                />
-                                <span className="text-lg font-semibold">Message Flow</span>
-                            </a>
+                        <a href="#" className="flex items-center">
+                            <img
+                                alt="Logo"
+                                src="/logo_b.png"
+                                className="h-10 w-10 mr-3"
+                            />
+                            <span className="text-lg font-semibold">MessageFlow</span>
+                        </a>
                     </div>
                     {/*<div className="flex lg:flex-1">*/}
                     {/*    <a href="#" className="-m-1.5 p-1.5">*/}
                     {/*        <span className="sr-only">Message Eafsy</span>*/}
                     {/*        <Image*/}
                     {/*            alt="Logo"*/}
-                    {/*            src="/logo.jpg"*/}
+                    {/*            src="/logo.png"*/}
                     {/*            className="h-10 w-10"*/}
                     {/*        />*/}
                     {/*    </a>*/}
@@ -326,57 +326,57 @@ export default function HomePage() {
                     </div>
                 </div>
 
-              {/*  /!* Logo cloud *!/*/}
-              {/*  <div className="mx-auto max-w-7xl px-6 lg:px-8">*/}
-              {/*      <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">*/}
-              {/*          <Image*/}
-              {/*              alt="Transistor"*/}
-              {/*              src="https://tailwindui.com/Image/logos/158x48/transistor-logo-gray-900.svg"*/}
-              {/*              width={158}*/}
-              {/*              height={48}*/}
-              {/*              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"*/}
-              {/*          />*/}
-              {/*          <Image*/}
-              {/*              alt="Reform"*/}
-              {/*              src="https://tailwindui.com/Image/logos/158x48/reform-logo-gray-900.svg"*/}
-              {/*              width={158}*/}
-              {/*              height={48}*/}
-              {/*              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"*/}
-              {/*          />*/}
-              {/*          <Image*/}
-              {/*              alt="Tuple"*/}
-              {/*              src="https://tailwindui.com/Image/logos/158x48/tuple-logo-gray-900.svg"*/}
-              {/*              width={158}*/}
-              {/*              height={48}*/}
-              {/*              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"*/}
-              {/*          />*/}
-              {/*          <Image*/}
-              {/*              alt="SavvyCal"*/}
-              {/*              src="https://tailwindui.com/Image/logos/158x48/savvycal-logo-gray-900.svg"*/}
-              {/*              width={158}*/}
-              {/*              height={48}*/}
-              {/*              className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"*/}
-              {/*          />*/}
-              {/*          <Image*/}
-              {/*              alt="Statamic"*/}
-              {/*              src="https://tailwindui.com/Image/logos/158x48/statamic-logo-gray-900.svg"*/}
-              {/*              width={158}*/}
-              {/*              height={48}*/}
-              {/*              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"*/}
-              {/*          />*/}
-              {/*      </div>*/}
-              {/*      <div className="mt-16 flex justify-center">*/}
-              {/*          <p className="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20">*/}
-              {/*<span className="hidden md:inline">*/}
-              {/*  Transistor saves up to $40,000 per year, per employee by working with us.*/}
-              {/*</span>*/}
-              {/*              <a href="#" className="font-semibold text-indigo-600">*/}
-              {/*                  <span aria-hidden="true" className="absolute inset-0" /> Read our case study{' '}*/}
-              {/*                  <span aria-hidden="true">&rarr;</span>*/}
-              {/*              </a>*/}
-              {/*          </p>*/}
-              {/*      </div>*/}
-              {/*  </div>*/}
+                {/*  /!* Logo cloud *!/*/}
+                {/*  <div className="mx-auto max-w-7xl px-6 lg:px-8">*/}
+                {/*      <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">*/}
+                {/*          <Image*/}
+                {/*              alt="Transistor"*/}
+                {/*              src="https://tailwindui.com/Image/logos/158x48/transistor-logo-gray-900.svg"*/}
+                {/*              width={158}*/}
+                {/*              height={48}*/}
+                {/*              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"*/}
+                {/*          />*/}
+                {/*          <Image*/}
+                {/*              alt="Reform"*/}
+                {/*              src="https://tailwindui.com/Image/logos/158x48/reform-logo-gray-900.svg"*/}
+                {/*              width={158}*/}
+                {/*              height={48}*/}
+                {/*              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"*/}
+                {/*          />*/}
+                {/*          <Image*/}
+                {/*              alt="Tuple"*/}
+                {/*              src="https://tailwindui.com/Image/logos/158x48/tuple-logo-gray-900.svg"*/}
+                {/*              width={158}*/}
+                {/*              height={48}*/}
+                {/*              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"*/}
+                {/*          />*/}
+                {/*          <Image*/}
+                {/*              alt="SavvyCal"*/}
+                {/*              src="https://tailwindui.com/Image/logos/158x48/savvycal-logo-gray-900.svg"*/}
+                {/*              width={158}*/}
+                {/*              height={48}*/}
+                {/*              className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"*/}
+                {/*          />*/}
+                {/*          <Image*/}
+                {/*              alt="Statamic"*/}
+                {/*              src="https://tailwindui.com/Image/logos/158x48/statamic-logo-gray-900.svg"*/}
+                {/*              width={158}*/}
+                {/*              height={48}*/}
+                {/*              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"*/}
+                {/*          />*/}
+                {/*      </div>*/}
+                {/*      <div className="mt-16 flex justify-center">*/}
+                {/*          <p className="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20">*/}
+                {/*<span className="hidden md:inline">*/}
+                {/*  Transistor saves up to $40,000 per year, per employee by working with us.*/}
+                {/*</span>*/}
+                {/*              <a href="#" className="font-semibold text-indigo-600">*/}
+                {/*                  <span aria-hidden="true" className="absolute inset-0" /> Read our case study{' '}*/}
+                {/*                  <span aria-hidden="true">&rarr;</span>*/}
+                {/*              </a>*/}
+                {/*          </p>*/}
+                {/*      </div>*/}
+                {/*  </div>*/}
 
                 {/* Feature section */}
                 <div id="features" className="mx-auto max-w-7xl px-6  lg:px-4">
@@ -416,7 +416,7 @@ export default function HomePage() {
                 {/*        />*/}
                 {/*        <div className="absolute inset-0 bg-gray-900/90 mix-blend-multiply" />*/}
                 {/*        <div className="relative mx-auto max-w-2xl lg:mx-0">*/}
-                {/*            <Image className="h-12 w-auto" src="/customer-logo.png" alt="Testimonial company logo" />*/}
+                {/*            <Image className="h-12 w-auto" src="/customer-logo_b.png" alt="Testimonial company logo" />*/}
                 {/*            <figure>*/}
                 {/*                <blockquote className="mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8">*/}
                 {/*                    <p>*/}
@@ -587,7 +587,7 @@ export default function HomePage() {
             {/*        <div className="xl:grid xl:grid-cols-3 xl:gap-8">*/}
             {/*            <Image*/}
             {/*                alt="Company name"*/}
-            {/*                src="/logo.jpg"*/}
+            {/*                src="/logo.png"*/}
             {/*                className="h-8 w-8"*/}
             {/*            />*/}
             {/*            <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">*/}
@@ -662,17 +662,17 @@ export default function HomePage() {
                             <div className="flex items-center">
                                 <img
                                     alt="Company logo"
-                                    src="/logo.jpg"
+                                    src="/logo_b.png"
                                     className="h-8 w-8 mr-3 rounded-md"
                                 />
-                                <span className="text-lg font-semibold">Message Flow</span>
+                                <span className="text-lg font-semibold">MessageFlow</span>
                             </div>
                             <div className="flex space-x-4 mt-6">
-                                <a href="https://linkedin.com/company/yourcompany" target="_blank"
+                                <a href="https://www.linkedin.com/in/saad-o-o-8ab5a3123/" target="_blank"
                                    rel="noopener noreferrer">
                                     <img src="/linkedin.png" alt="LinkedIn" className="h-10 w-10"/>
                                 </a>
-                                <a href="https://github.com/yourcompany" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/BGD-1DAY00" target="_blank" rel="noopener noreferrer">
                                     <img src="/github.png" alt="GitHub" className="h-10 w-10"/>
                                 </a>
                             </div>
@@ -690,7 +690,7 @@ export default function HomePage() {
                                         </a>
                                     </li>
                                     <li>
-                                    <a href="/contact" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                                        <a href="/contact" className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                                             Contact Us
                                         </a>
                                     </li>
@@ -713,3 +713,4 @@ export default function HomePage() {
         </div>
     )
 }
+

@@ -1,4 +1,4 @@
-name: Update Version, Build and Publish
+name: Update Version and Publish Docker
 
 on:
   push:
@@ -7,11 +7,10 @@ on:
       - 'packages/**'
 
 jobs:
-  update-version-and-publish:
+  update-version:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      packages: write
     strategy:
       matrix:
         package:
@@ -38,6 +37,21 @@ jobs:
 
       - name: Build ${{ matrix.package }}
         run: yarn workspace ${{ matrix.package }} build
+
+  docker-publish:
+    needs: update-version
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    strategy:
+      matrix:
+        package:
+          - messageflow-core-service
+          - messageflow-docs-app
+          - messageflow-gateway-service
+          - messageflow-web-app
+    steps:
+      - uses: actions/checkout@v4
 
       - name: Get package version
         id: package-version

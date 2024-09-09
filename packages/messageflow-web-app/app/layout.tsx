@@ -5,8 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Message Easy",
-  description: "Build & Deploy Distributed Messaging Systems in Seconds",
+  title: "MessageFlow",
+  description: "Build & Ship in Minutes",
+
 };
 
 export default function RootLayout({
